@@ -298,22 +298,6 @@ void create_child(char **cmd_arr)
 	}
 }
 
-/**
- *
- *
- */
-void free_arr(char **arr)
-{
-    int i;
-
-    for (i = 0; arr[i] != NULL; i++)
-    {
-        free(arr[i]);
-    }
-
-    free(arr);
-}
-
 
 /**
  * main - entry point
@@ -343,7 +327,6 @@ int main(void)
 		{
 			create_child(cmd_arr);
 		}
-		free_arr(cmd_arr);
 		free(buf);
 	}
 
